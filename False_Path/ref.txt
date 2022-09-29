@@ -1,0 +1,1 @@
+https://support.xilinx.com/s/question/0D52E00006mibS0SAI/constraining-2-external-clocks-that-are-synchronous?language=en_US
