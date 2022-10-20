@@ -11,10 +11,10 @@ create_generated_clock -name clk_1 -source $pll_input -master_clock [get_clocks 
 create_generated_clock -name clk_2 -source $pll_input -master_clock [get_clocks i_clk] $pll_output_2
 
 # сдвиг защелкивающего фронта вправо для анализа по Setup
-#set_multicycle_path 2 -setup -end -from [get_pins data_clk_1_reg/C] -to [get_pins data_clk_2_reg/D]
+set_multicycle_path 2 -setup -end -from [get_pins data_clk_1_reg/C] -to [get_pins data_clk_2_reg/D]
 
 # сдвиг защелкивающего фронта влево для анализа по Hold
-#set_multicycle_path 1 -hold  -end -from [get_pins data_clk_1_reg/C] -to [get_pins data_clk_2_reg/D]
+set_multicycle_path 1 -hold  -end -from [get_pins data_clk_1_reg/C] -to [get_pins data_clk_2_reg/D]
 
 
 # сдвиг запускающего фронта влево для анализа по Setup
